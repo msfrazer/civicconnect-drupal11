@@ -1,0 +1,17 @@
+name: CivicConnect
+type: theme
+description: 'Custom Drupal 11 frontend theme for the CivicConnect portfolio project.'
+package: Custom
+core_version_requirement: ^11
+base theme: false
+
+libraries:
+  - civicconnect_theme/global-styling
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  hero: Hero
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
