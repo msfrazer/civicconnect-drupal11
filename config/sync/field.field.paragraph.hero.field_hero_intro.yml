@@ -1,0 +1,24 @@
+uuid: cc1a127e-5e73-41f2-a175-406bd546e39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_intro
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.hero
+  module:
+    - text
+id: paragraph.hero.field_hero_intro
+field_name: field_hero_intro
+entity_type: paragraph
+bundle: hero
+label: 'Hero Intro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

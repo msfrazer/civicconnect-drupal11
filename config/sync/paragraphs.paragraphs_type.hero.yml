@@ -1,0 +1,10 @@
+uuid: 051a6873-b6e2-43ba-9b2a-3c203e018321
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+icon_uuid: null
+icon_default: null
+description: 'Large introductory banner with image, heading, supporting text, and call-to-action link.'
+behavior_plugins: {  }

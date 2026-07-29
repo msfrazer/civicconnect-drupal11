@@ -1,9 +1,9 @@
 _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
-uuid: 5b397996-6af9-427f-9757-827fe4a281cc
+uuid: 9e7cb7ce-9727-4930-9700-c24f12ef68fc
 name: CivicConnect
-mail: southerlandfrazerm@gmail.com
+mail: admin@example.com
 slogan: ''
 page:
   403: ''

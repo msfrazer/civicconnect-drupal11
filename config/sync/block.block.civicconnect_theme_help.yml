@@ -1,0 +1,22 @@
+uuid: 8c1f7ca1-96c6-4a88-880c-087e168d19e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - civicconnect_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: civicconnect_theme_help
+theme: civicconnect_theme
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
