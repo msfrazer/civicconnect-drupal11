@@ -1,0 +1,26 @@
+.cta {
+  padding: 4rem 1rem;
+  background: #0b4f6c;
+  color: #fff;
+  text-align: center;
+
+  &__inner {
+    width: min(100%, 800px);
+    margin-inline: auto;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  &__description {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+  }
+}
+
+.button--secondary {
+  background: #fff;
+  color: #0b4f6c;
+}

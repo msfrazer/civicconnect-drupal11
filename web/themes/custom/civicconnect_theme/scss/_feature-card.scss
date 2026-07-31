@@ -1,0 +1,127 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #d9e0e6;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1.5rem rgba(31, 41, 51, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+
+  &:hover {
+    transform: translateY(-0.35rem);
+    box-shadow: 0 1rem 2rem rgba(31, 41, 51, 0.12);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    img {
+      display: block;
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    min-height: 4.5rem;
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  &__description {
+    max-width: 260px;
+    margin: 0 auto 1.5rem;
+    color: #4b5563;
+    line-height: 1.8;
+  }
+}
+
+/* CTA must remain outside .feature-card */
+.cta {
+  margin-top: 5rem;
+  padding: 5rem 2rem;
+  color: #fff;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #f4a261;
+  color: #17212b;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+  .cta a:hover {
+    background: #e79043;
+}
+   .cta p {
+    max-width: 650px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+   .button--secondary {
+    background: #f4a261;
+    color: #0b4f6c;
+}
+  .feature-card__description {
+    max-width: 260px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+  
+
+
+/* Features section */
+.field--name-field-features {
+  margin-block: 4rem;
+}
+
+/* Flatten Drupal's intermediate wrappers */
+.field--name-field-features > .field__items {
+  display: contents;
+}
+
+/* Parent containing the three Drupal card wrappers */
+.homepage__content div:has(> div > article.feature-card) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-block: 4rem;
+}
+
+/* Each Drupal wrapper becomes one grid item */
+.homepage__content div:has(> div > article.feature-card)
+  > div {
+  min-width: 0;
+}
+
+/* Card fills its grid column */
+.homepage__content div:has(> div > article.feature-card)
+  > div
+  > article.feature-card {
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .homepage__content div:has(> div > article.feature-card) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .homepage__content div:has(> div > article.feature-card) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,25 @@
+<article{{ attributes.addClass('feature-card') }}>
+  {% if content.field_icon %}
+    <div class="feature-card__icon">
+      {{ content.field_icon }}
+    </div>
+  {% endif %}
+
+  {% if paragraph.field_title.value %}
+    <h2 class="feature-card__title">
+      {{ paragraph.field_title.value }}
+    </h2>
+  {% endif %}
+
+  {% if content.field_description %}
+    <div class="feature-card__description">
+      {{ content.field_description }}
+    </div>
+  {% endif %}
+
+  {% if paragraph.field_link.0.url %}
+    <a class="feature-card__link" href="{{ paragraph.field_link.0.url }}">
+      {{ paragraph.field_link.0.title ?: 'Learn more' }}
+    </a>
+  {% endif %}
+</article>

@@ -1,0 +1,13 @@
+@media (max-width: 800px) {
+  .field--name-field-features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 500px;
+
+    &__media img {
+      height: 500px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<section class="hero">
+  <div class="hero__media">
+    {{ content.field_hero_image }}
+  </div>
+
+  <div class="hero__overlay">
+    <div class="hero__content">
+      {% if content.field_hero_heading %}
+        <h1 class="hero__title">
+          {{ content.field_hero_heading }}
+        </h1>
+      {% endif %}
+
+      {% if content.field_hero_intro %}
+        <div class="hero__intro">
+          {{ content.field_hero_intro }}
+        </div>
+      {% endif %}
+
+      {% if paragraph.field_primary_button_link.uri and paragraph.field_primary_button_text.value %}
+        <a
+          class="button button--primary"
+          href="{{ paragraph.field_primary_button_link.0.url }}"
+        >
+          {{ paragraph.field_primary_button_text.value }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>

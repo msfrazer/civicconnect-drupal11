@@ -1,0 +1,112 @@
+.site-footer {
+  padding: 4rem 2rem 3rem;
+  background: #17212b;
+  color: #fff;
+
+  &__inner {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+
+    // Drupal's footer-region wrapper.
+    > :first-child {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      grid-template-areas:
+        "branding menu contact"
+        "about menu contact";
+      column-gap: 3rem;
+      row-gap: 1rem;
+      align-items: start;
+
+      > :nth-child(1) {
+        grid-area: branding;
+      }
+
+      > :nth-child(2) {
+        grid-area: about;
+      }
+
+      > :nth-child(3) {
+        grid-area: menu;
+      }
+
+      > :nth-child(4) {
+        grid-area: contact;
+      }
+    }
+  }
+
+  .block-system-branding-block {
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    margin: 0 0 1.25rem;
+    color: #fff;
+    font-size: 1.125rem;
+  }
+
+  p {
+    margin: 0.4rem 0;
+  }
+
+  a {
+    color: #f4a261;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  ul,
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  li + li {
+    margin-top: 0.75rem;
+  }
+
+  &__bottom {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.55);
+    text-align: center;
+
+    p {
+      width: 100%;
+      margin: 0.35rem 0;
+      text-align: center;
+    }
+
+    a {
+      display: inline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-inline: 1.5rem;
+
+    &__inner > :first-child {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "branding"
+        "about"
+        "menu"
+        "contact";
+      gap: 2rem;
+    }
+  }
+}

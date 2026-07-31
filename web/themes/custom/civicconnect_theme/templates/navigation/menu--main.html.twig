@@ -1,0 +1,35 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('main-menu') }}>
+    {% else %}
+      <ul class="main-menu__submenu">
+    {% endif %}
+
+    {% for item in items %}
+      {% set item_classes = [
+        'main-menu__item',
+        item.in_active_trail ? 'main-menu__item--active'
+      ] %}
+
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {{ link(item.title, item.url, {
+          class: [
+            'main-menu__link',
+            item.in_active_trail ? 'main-menu__link--active'
+          ]
+        }) }}
+
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+
+    </ul>
+  {% endif %}
+{% endmacro %}

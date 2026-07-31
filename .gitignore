@@ -10,6 +10,7 @@
 
 # Drupal files
 /web/sites/default/files/
+/web/sites/default/services.yml
 
 # Environment
 .env
@@ -23,3 +24,9 @@
 # Local database backups
 *.sql
 *.sql.gz
+
+node_modules/
+
+# Drupal Composer-managed contributed modules
+/web/modules/contrib/
+
