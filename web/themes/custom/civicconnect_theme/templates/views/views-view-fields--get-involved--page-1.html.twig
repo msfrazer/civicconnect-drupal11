@@ -1,0 +1,44 @@
+<article class="volunteer-card">
+
+
+
+  <div class="volunteer-card__image">
+    {{ fields.field_opportunity_image.content }}
+  </div>
+
+
+  
+
+  <div class="volunteer-card__body">
+
+    <div class="volunteer-card__category">
+      {{ fields.field_opportunity_category.content }}
+    </div>
+
+    <h2 class="volunteer-card__title">
+      {{ fields.title.content }}
+    </h2>
+
+    <p class="volunteer-card__organization">
+      {{ fields.field_organization.content }}
+    </p>
+
+    <p class="volunteer-card__description">
+      {{ fields.field_description.content }}
+    </p>
+
+    <ul class="volunteer-card__details">
+      <li>{{ fields.field_location.content }}</li>
+      <li>{{ fields.field_commitment.content }}</li>
+      <li>{{ fields.field_skills_needed.content }}</li>
+    </ul>
+
+    <div class="volunteer-card__button">
+      {{ fields.field_application_link.content }}
+    </div>
+
+    
+
+  </div>
+
+</article>

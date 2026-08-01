@@ -1,0 +1,62 @@
+<article class="resource-card">
+
+  <div class="resource-card__image">
+    {{ fields.field_resources_image.content }}
+  </div>
+
+  <div class="resource-card__content">
+
+    {% if fields.field_resources_category.content %}
+      <div class="resource-card__category">
+        {{ fields.field_resources_category.content }}
+      </div>
+    {% endif %}
+
+    <h2 class="resource-card__title">
+      {{ fields.title.content }}
+    </h2>
+
+    <div class="resource-card__description">
+      {{ fields.field_resources_description.content }}
+    </div>
+
+    <div class="resource-card__details">
+
+      {% if fields.field_address.content %}
+        <div class="resource-card__detail">
+          <svg
+            class="resource-card__icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+
+          <span>{{ fields.field_address.content }}</span>
+        </div>
+      {% endif %}
+
+      {% if fields.field_phone.content %}
+        <div class="resource-card__detail">
+          <svg
+            class="resource-card__icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false">
+            <path d="M7 3h3l2 5-2 2a16 16 0 0 0 4 4l2-2 5 2v3c0 2-2 4-4 4C9 21 3 15 3 7c0-2 2-4 4-4Z"/>
+          </svg>
+
+          <span>{{ fields.field_phone.content }}</span>
+        </div>
+      {% endif %}
+
+    </div>
+
+    <div class="resource-card__link">
+      {{ fields.field_website.content }}
+    </div>
+
+  </div>
+
+</article>

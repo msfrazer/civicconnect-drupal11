@@ -1,0 +1,28 @@
+<div{{ attributes.addClass('resources-view') }}>
+
+  <section class="resources-intro">
+    <p class="resources-intro__eyebrow">
+      Community Support
+    </p>
+
+    <h1 class="resources-intro__title">
+      Find Local Resources
+    </h1>
+
+    <p class="resources-intro__description">
+      Explore trusted services for food, healthcare, housing, employment,
+      education, and transportation.
+    </p>
+  </section>
+
+  {% if rows %}
+    {{ rows }}
+  {% elseif empty %}
+    {{ empty }}
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+
+</div>

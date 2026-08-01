@@ -1,0 +1,73 @@
+<article{{ attributes.addClass('resource-detail') }}>
+
+  <section class="resource-detail__hero">
+    <div class="resource-detail__image">
+      {{ content.field_opportunity_image }}
+    </div>
+
+    <div class="resource-detail__overlay"></div>
+
+    <div class="resource-detail__hero-content">
+      {% if content.field_opportunity_category %}
+        <div class="resource-detail__category">
+          {{ content.field_opportunity_category }}
+        </div>
+      {% endif %}
+
+      <h1 class="resource-detail__title">
+        {{ label }}
+      </h1>
+    </div>
+  </section>
+
+  <div class="resource-detail__layout">
+
+    <main class="resource-detail__main">
+      <h2>About this opportunity</h2>
+
+      <div class="resource-detail__description">
+        {{ content.field_opportunity_description }}
+      </div>
+
+
+     <div class="volunteer-meta">
+
+  <div class="volunteer-meta__item">
+    <h3>Commitment</h3>
+    {{ content.field_commitment }}
+  </div>
+
+  <div class="volunteer-meta__item">
+    <h3>Skills Needed</h3>
+    {{ content.field_skills_needed }}
+  </div>
+
+    </div> 
+    </main>
+
+    <aside class="resource-detail__sidebar volunteer-detail__sidebar">
+
+  <div class="resource-detail__info">
+    <span class="resource-detail__info-label">Organization</span>
+    {{ content.field_organization }}
+  </div>
+
+  <div class="resource-detail__info">
+    <span class="resource-detail__info-label">Location</span>
+    {{ content.field_location }}
+  </div>
+
+  <div class="resource-detail__info">
+    <span class="resource-detail__info-label">Category</span>
+    {{ content.field_opportunity_category }}
+  </div>
+
+  <div class="resource-detail__button">
+    {{ content.field_application_link }}
+  </div>
+
+</aside>
+
+  </div>
+
+</article>

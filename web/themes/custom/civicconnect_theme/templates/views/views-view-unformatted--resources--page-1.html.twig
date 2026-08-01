@@ -1,0 +1,11 @@
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+<div class="resources-grid">
+  {% for row in rows %}
+    <div{{ row.attributes.addClass('resources-grid__item') }}>
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

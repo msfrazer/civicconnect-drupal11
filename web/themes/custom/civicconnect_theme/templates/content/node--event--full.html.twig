@@ -1,0 +1,92 @@
+<article{{ attributes.addClass('event-detail') }}>
+
+  <div class="event-detail__hero">
+    <div class="event-detail__image">
+      {{ content.field_event_image }}
+    </div>
+
+    <div class="event-detail__overlay"></div>
+
+    <div class="event-detail__hero-content">
+      {% if content.field_event_category %}
+        <div class="event-detail__category">
+          {{ content.field_event_category }}
+        </div>
+      {% endif %}
+
+      <h1 class="event-detail__title">
+        {{ label }}
+      </h1>
+    </div>
+  </div>
+
+  <div class="event-detail__layout">
+
+    <div class="event-detail__main">
+
+      <div class="event-detail__meta">
+        <div class="event-detail__meta-item">
+          <svg
+            class="event-detail__icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false">
+            <path d="M7 2v3M17 2v3M3.5 9h17M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>
+          </svg>
+
+          <div>
+            <span class="event-detail__meta-label">Date and time</span>
+            {{ content.field_event_date }}
+          </div>
+        </div>
+
+        <div class="event-detail__meta-item">
+          <svg
+            class="event-detail__icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+
+          <div>
+            <span class="event-detail__meta-label">Location</span>
+            {{ content.field_event_location }}
+          </div>
+        </div>
+      </div>
+
+      <section class="event-detail__about">
+        <h2>About this event</h2>
+        {{ content.field_event_summary }}
+      </section>
+
+    </div>
+
+    <aside class="event-detail__sidebar">
+
+      {% set volunteer_spots =
+        content.field_volunteer_spots_available|render|striptags|trim
+      %}
+
+      {% if volunteer_spots %}
+        <div class="event-detail__spots">
+          <span class="event-detail__spots-number">
+            {{ volunteer_spots }}
+          </span>
+          <span class="event-detail__spots-label">
+            volunteer spots available
+          </span>
+        </div>
+      {% endif %}
+
+      <div class="event-detail__cta">
+        {{ content.field_button_link }}
+      </div>
+
+    </aside>
+
+  </div>
+
+</article>
