@@ -33,6 +33,8 @@
     width: min(100% - 2rem, 1200px);
     margin-inline: auto;
     color: #fff;
+    transform: translateY(-2rem);
+
   }
 
   &__title {
