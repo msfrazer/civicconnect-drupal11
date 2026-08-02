@@ -19,14 +19,23 @@
 .ddev/.dbimageBuild/
 .ddev/.webimageBuild/
 
-# Logs
-*.log
-# Local database backups
+# Local database and file backups
 *.sql
 *.sql.gz
+*.tar.gz
 
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Front-end dependencies
 node_modules/
+**/node_modules/
+
+# Local Drupal development overrides
+web/sites/default/services.yml
 
 # Drupal Composer-managed contributed modules
 /web/modules/contrib/
 
+web/core/tests/fixtures/test-error.log
