@@ -222,8 +222,6 @@ Front-End Developer | Drupal Developer | Web Content Specialist
 LinkedIn:
 https://linkedin.com/in/msfrazer
 
-Portfolio:
-(Add portfolio URL)
 
 ---
 
